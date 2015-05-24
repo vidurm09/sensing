@@ -3,7 +3,6 @@ import glob
 import time
 import sensing 
 
-sensing.sensor
 os.system('modprobe w1-gpio') 
 os.system('modprobe w1-therm') 
 base_dir = '/sys/bus/w1/devices/' 
@@ -24,8 +23,8 @@ def read_temp():
         temp_string = lines[1][equals_pos+2:]
         temp_c = float(temp_string) / 1000.0
         temp_f = temp_c * 9.0 / 5.0 + 32.0
-        return temp_c, temp_f
+        return temp_f
 	
 while True:
-	print(read_temp())
+	sensing.report.reportData("temp", read_temp(), "F")
 	time.sleep(1)
