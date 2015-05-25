@@ -8,6 +8,8 @@ os.system('modprobe w1-therm')
 base_dir = '/sys/bus/w1/devices/' 
 device_folder = glob.glob(base_dir + '28*')[0] 
 device_file = device_folder + '/w1_slave' 
+sensorType = "DS18B20"
+sensing.sensor.uniqueSensor(sensorType)
 def read_temp_raw():
     f = open(device_file, 'r')
     lines = f.readlines()
@@ -26,5 +28,6 @@ def read_temp():
         return temp_f
 	
 while True:
-	sensing.report.reportData("temp", read_temp(), "F")
+	sensing.report.reportData("DS18B20", read_temp(), "F")
 	time.sleep(1)
+

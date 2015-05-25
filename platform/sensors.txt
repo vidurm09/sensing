@@ -1,0 +1,18 @@
+
+DS18B20 = test
+DS18B20 = test
+DS18B20 = test
+DS18B20 = test
+DS18B20 = test
+DS18B20 = test
+DS18B20 = test
+DS18B20 = test
+DS18B20 = test
+DS18B20 = test
+DS18B20 = test
+DS18B20 = test
+DS18B20 = test
+DS18B20 = test
+DS18B20 = test
+DS18B20 = test
+DS18B20 = sensor-bb370e90-02b2-11e5-aca4-dd49d2a71754
